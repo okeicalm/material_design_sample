@@ -15,19 +15,19 @@ import com.okeifalm.materialdesignsample.R;
  * Created by keisuke on 2017/08/16.
  */
 
-public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
+public class CardRecyclerAdapter extends RecyclerView.Adapter<CardRecyclerAdapter.ViewHolder> {
     private Context context;
     private String[] mDataset;
 
-    public MyAdapter(String[] myDataset, Context context) {
+    public CardRecyclerAdapter(String[] myDataset, Context context) {
         super();
         this.mDataset = myDataset;
         this.context = context;
     }
 
     @Override
-    public MyAdapter.ViewHolder onCreateViewHolder(ViewGroup parent,
-                                                   int viewType) {
+    public CardRecyclerAdapter.ViewHolder onCreateViewHolder(ViewGroup parent,
+                                                             int viewType) {
         View v = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.my_card_view, parent, false);
         ViewHolder vh = new ViewHolder(v);
