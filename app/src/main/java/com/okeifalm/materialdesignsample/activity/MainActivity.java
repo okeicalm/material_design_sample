@@ -6,7 +6,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 import com.okeifalm.materialdesignsample.R;
-import com.okeifalm.materialdesignsample.adapter.MyAdapter;
+import com.okeifalm.materialdesignsample.adapter.CardRecyclerAdapter;
 
 public class MainActivity extends AppCompatActivity {
     private RecyclerView mRecyclerView;
@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
         String myDataset[] = {"aaaaa", "bbbbb", "ccccc"};
 
-        mAdapter = new MyAdapter(myDataset, getApplicationContext());
+        mAdapter = new CardRecyclerAdapter(myDataset, getApplicationContext());
         mRecyclerView.setAdapter(mAdapter);
     }
 }
