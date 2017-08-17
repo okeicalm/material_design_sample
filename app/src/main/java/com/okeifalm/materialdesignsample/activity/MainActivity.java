@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         mLayoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(mLayoutManager);
 
-        String myDataset[] = {"aaaaa", "bbbbb", "ccccc"};
+        String myDataset[] = {"Material Title 1", "Material Title 2", "Material Title 3","Material Title 1", "Material Title 2", "Material Title 3","Material Title 1", "Material Title 2", "Material Title 3","Material Title 1", "Material Title 2", "Material Title 3"};
 
         mAdapter = new CardRecyclerAdapter(myDataset, getApplicationContext());
         mRecyclerView.setAdapter(mAdapter);
