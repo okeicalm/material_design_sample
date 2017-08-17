@@ -6,6 +6,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -37,6 +38,8 @@ public class CardRecyclerAdapter extends RecyclerView.Adapter<CardRecyclerAdapte
     @Override
     public void onBindViewHolder(ViewHolder holder, final int position) {
         holder.mTextView.setText(mDataset[position]);
+        holder.mSubTitleTextView.setText("Subtitle here");
+        holder.mImageView.setImageResource(R.drawable.card_pic_04);
         holder.mCardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -53,11 +56,15 @@ public class CardRecyclerAdapter extends RecyclerView.Adapter<CardRecyclerAdapte
     public static class ViewHolder extends RecyclerView.ViewHolder {
         public CardView mCardView;
         public TextView mTextView;
+        public TextView mSubTitleTextView;
+        public ImageView mImageView;
 
         public ViewHolder(View v) {
             super(v);
             mCardView = (CardView)v.findViewById(R.id.card_view);
             mTextView = (TextView)v.findViewById(R.id.info_text);
+            mSubTitleTextView = (TextView)v.findViewById(R.id.sub_title_text);
+            mImageView = (ImageView)v.findViewById(R.id.imageView);
         }
     }
 }
