@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/card_layout"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal">
+    android:layout_height="wrap_content">
 
     <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/card_view"
+        android:id="@+id/button_card_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
@@ -33,9 +32,9 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
-                android:layout_marginBottom="24dp"
+                android:layout_marginBottom="16dp"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
                 android:orientation="vertical">
@@ -46,6 +45,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="left"
                     android:layout_marginBottom="12dp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Headline"
                     android:textSize="24sp"
                     tools:text="Title goes here" />
 
@@ -55,10 +55,35 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="left"
                     android:textSize="14sp"
-                    tools:text="Subtitle here" />
+                    tools:text="Subtitle here Subtitle here Subtitle here Subtitle here" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/flat_button_1"
+                    android:layout_width="88dp"
+                    android:layout_height="36dp"
+                    android:layout_marginEnd="8dp"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:textColor="@color/flatButtonTextColor"
+                    android:text="button1"/>
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/flat_button_2"
+                    android:layout_width="88dp"
+                    android:layout_height="36dp"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:textColor="@color/flatButtonTextColor"
+                    android:text="button2"/>
 
             </LinearLayout>
 
         </LinearLayout>
     </android.support.v7.widget.CardView>
+
 </LinearLayout>
